@@ -10,6 +10,7 @@ import NotFound from '../NotFound'
 import Navbar from '../../components/Navbar'
 
 import '../../App.css'
+import { ShoppingCartProvider } from '../../context'
 
 const AppRoutes = () => {
 
@@ -25,12 +26,14 @@ const AppRoutes = () => {
   return routes
 }
 
-const App = () => { 
+const App = () => {
   return (
-    <BrowserRouter>
-      <AppRoutes />
-      <Navbar />
-    </BrowserRouter>
+    <ShoppingCartProvider>
+      <BrowserRouter>
+        <AppRoutes />
+        <Navbar />
+      </BrowserRouter>
+    </ShoppingCartProvider>
   )
 }
 
