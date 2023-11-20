@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 
 import Layout from '../../components/Layout'
+import ProductDetail from '../../components/ProductDetail'
 
 const ItemList = lazy(() => import('../../components/ItemList'))
 
@@ -11,6 +12,7 @@ function Home() {
       <Suspense fallback={<div><h1>Cargando...</h1></div>}>
         <ItemList />
       </Suspense>
+      <ProductDetail />
     </Layout>
   )
 }

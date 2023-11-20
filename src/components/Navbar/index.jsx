@@ -103,7 +103,8 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    🛒{context.count}
+                    <img src="./cart.svg" alt="cart" className='w-4' />
+                    {context.count}
                 </li>
             </ul>
         </nav>
